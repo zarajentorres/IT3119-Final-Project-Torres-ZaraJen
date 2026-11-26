@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Records System</title>
+</head>
+<body>
+  <main>
+    <h1>Student Records System</h1>
+    <p>Class demonstration. Fictional records only.</p>
+
+    <form id="login">
+      <h2>Operator sign in</h2>
+
+      <label>
+        Email
+        <input id="email" type="email" required />
+      </label>
+
+      <label>
+        Password
+        <input id="password" type="password" required />
+      </label>
+
+      <button type="submit">Sign in</button>
+    </form>
+
+    <p id="auth-message" role="status"></p>
+
+    <section id="app" hidden>
+      <p id="signed-in"></p>
+      <button id="logout" type="button">Sign out</button>
+
+      <h2>Add or edit a student</h2>
+
+      <form id="student-form">
+        <input id="student-id" type="hidden" />
+
+        <label>
+          Student number
+          <input id="student-no" />
+        </label>
+
+        <label>
+          First name
+          <input id="first-name" />
+        </label>
+
+        <label>
+          Last name
+          <input id="last-name" />
+        </label>
+
+        <label>
+          Year level
+          <input id="year" type="number" min="1" max="4" />
+        </label>
+
+        <label>
+          Student email
+          <input id="student-email" type="email" required />
+        </label>
+
+        <label>
+          Course
+          <select id="course">
+            <option value="">Choose a course</option>
+          </select>
+        </label>
+
+        <button type="submit">Save student</button>
+        <button id="clear" type="button">Clear form</button>
+      </form>
+
+      <p id="message" role="status"></p>
+
+      <h2>Student list</h2>
+
+      <label>
+        Search name or student number
+        <input id="search" />
+      </label>
+
+      <button id="refresh" type="button">Refresh list</button>
+
+      <ul id="student-list"></ul>
+
+      <h2>Course report</h2>
+
+      <label>
+        Choose course
+        <select id="report-course">
+          <option value="">Choose a course</option>
+        </select>
+      </label>
+
+      <button id="count" type="button">Count students</button>
+      <p id="report" role="status"></p>
+
+      <h2>Departments</h2>
+      <ul id="department-list"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
